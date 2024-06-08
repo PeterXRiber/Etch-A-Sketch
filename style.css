@@ -1,22 +1,25 @@
 body{
-    color: plum;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+
+    background-color: plum;
 }
 
 #container {
     display: flex;
-flex-direction: column;
-justify-content: center;
+    flex-wrap: wrap;
     color: black;
-    background-color: plum;
+  
 
 }
 
 .squareDiv {
-display: flex;
+    width: 100px;
+    height: 100px;
+    border: 2px solid #000;
 
-
-
-border: solid;
 border-color: black;
 background-color: burlywood;
 }

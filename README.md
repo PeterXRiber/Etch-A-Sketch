@@ -8,6 +8,6 @@ This project will demand the following from the author:
 - As the first project in TOP that does not hold your hand, 
   it is expected to google a lot for certain parts of the programs
   functionality. Don't create the wheel.
-- Still, it is allowed to google smaller parts, NOT THE SOLUTION!
+- Still, it is allowed to google smaller parts, NOT THE COMPLETE SOLUTION!
 - Remember to use pseudo-code to understand a difficult problem
   and have fun! It is just an experiment :)
