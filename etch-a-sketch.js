@@ -1,45 +1,40 @@
 
+const container = document.querySelector("#container");
+const mouseTrack = document.querySelector("#mouseTrack");
+const myBtn = document.querySelector("#myBtn");
 
-document.addEventListener("DOMContentLoaded", function() {
 
-
-    
-
-    var container = document.querySelector("#container");
-    
-
+document.addEventListener("DOMContentLoaded", event => {
     let row = 16;
     let column = 16;
-
-
     for (i = 0; i < row; i++) {
-
-        const squareDiv = document.createElement("div");
-            squareDiv.textContent = "HI";
-            squareDiv.classList.add("squareDiv");
-
-            squareDiv.style.left = i * 100 + "px";
-            
-            
-
-            container.appendChild(squareDiv);
-        
         for (j = 0; j < column; j++) {
-            
-            const squareDiv = document.createElement("div");
-            squareDiv.textContent = "HI";
+            let squareDiv = document.createElement("div");
+            squareDiv.textContent = "";
             squareDiv.classList.add("squareDiv");
-
-            
-            squareDiv.style.left = j * 100 + "px";
-            
-
             container.appendChild(squareDiv);
         }
     }
-
-
 });
+
+container.addEventListener("mousemove", event => {
+    let log = document.querySelector("#log");
+    log.textContent = `
+    Screen X/Y: (${event.screenX}, ${event.screenY})`
+});
+
+container.addEventListener("mouseover", event => {
+    event.target.style.background = "black";
+});
+
+
+container.addEventListener("click", event => {
+    event.target.style.backgroundColor = "white";
+});
+
+
+
+
 
 
 
