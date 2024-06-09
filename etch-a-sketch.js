@@ -7,10 +7,10 @@ const myBtn = document.querySelector("#myBtn");
 
 
 document.addEventListener("DOMContentLoaded", event => {
-    let row = 16;
-    let column = 16;
-    for (i = 0; i < row; i++) {
-        for (j = 0; j < column; j++) {
+    let row = 10;
+    let column = 10;
+    for (i = 0; i <= row; i++) {
+        for (j = 0; j <= column; j++) {
             let squareDiv = document.createElement("div");
             squareDiv.textContent = "";
             squareDiv.classList.add("squareDiv");
@@ -21,6 +21,11 @@ document.addEventListener("DOMContentLoaded", event => {
 
 myBtn.addEventListener("click", event => {
 let numberOfSquares = prompt("How many squares you want?", "");
+if (numberOfSquares > 100) {
+    alert ("TOO MUCH!");
+     row = 16;
+     column = 16;
+}
 let row = numberOfSquares;
 let column = numberOfSquares;
 
