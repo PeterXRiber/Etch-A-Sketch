@@ -1,7 +1,9 @@
 
 const container = document.querySelector("#container");
-const mouseTrack = document.querySelector("#mouseTrack");
 const myBtn = document.querySelector("#myBtn");
+
+
+
 
 
 document.addEventListener("DOMContentLoaded", event => {
@@ -16,6 +18,23 @@ document.addEventListener("DOMContentLoaded", event => {
         }
     }
 });
+
+myBtn.addEventListener("click", event => {
+let numberOfSquares = prompt("How many squares you want?", "");
+let row = numberOfSquares;
+let column = numberOfSquares;
+
+for (i = 0; i < row; i++) {
+    for (j = 0; j < column; j++) {
+        let squareDiv = document.createElement("div");
+        squareDiv.textContent = "";
+        squareDiv.classList.add("squareDiv");
+        container.appendChild(squareDiv);
+    }
+}
+
+}); 
+
 
 container.addEventListener("mousemove", event => {
     let log = document.querySelector("#log");
